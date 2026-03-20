@@ -1,8 +1,7 @@
 # ESP32
 
-- **Integrantes:** {cristian.pereyra}@mi.unc.edu.ar 
-
-
+- **Integrantes:** {cristian.pereyra,francisco.coschica,nicolas.lopez.casanegra}@mi.unc.edu.ar 
+- **Profesor:** Javier Jorge
 
 
 # Objetivos
