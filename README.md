@@ -19,5 +19,5 @@
 
 #### msp32
 
-[INFORME](.msp32/INFORME.md)
+- [INFORME](./msp32/INFORME.md)
 

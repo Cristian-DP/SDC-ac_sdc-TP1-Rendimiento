@@ -1,3 +1,6 @@
+# ESP32
+
+- **Integrantes:** {cristian.pereyra}@mi.unc.edu.ar 
 
 
 
@@ -26,7 +29,7 @@ Se reduce cumpliendose la ecuación de Rendimiento donde al no modificar las ins
 
 - https://wokwi.com/projects/new/esp32 
 
-![ecuación de rendimiento](../images/simulacion.png)
+![ecuación de rendimiento](../images/simulador.png)
 
 ### Código
 
