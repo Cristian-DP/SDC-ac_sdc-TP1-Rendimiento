@@ -3,6 +3,8 @@
 - **Integrantes:** {cristian.pereyra,francisco.coschica,nicolas.lopez.casanegra}@mi.unc.edu.ar 
 - **Profesor:** Javier Jorge
 
+- [X] Benchmark
+- [X] Rendimiento
 
 ## Objetivos
 
@@ -16,16 +18,16 @@ El trabajo consta de dos partes
 
 En un informe deberán responder a las siguientes preguntas y mostrar con capturas de pantalla la realización del tutorial descrito en time profiling adjuntando las conclusiones sobre el uso del tiempo de las funciones.
 
-I. Armar una lista de benchmarks, ¿cuales les serían más útiles a cada uno ? ¿Cuáles podrían llegar a medir mejor las tareas que ustedes realizan a diario ?
+I. Armar una lista de benchmarks, ¿cuales les serían más útiles a cada uno ? ¿Cuáles podrían llegar a medir mejor las tareas que ustedes realizan a diario ? ensar en las tareas que cada uno realiza a diario y escribir en una tabla de dos entradas las tareas y que benchmark la representa mejor.
 
-II- Pensar en las tareas que cada uno realiza a diario y escribir en una tabla de dos entradas las tareas y que benchmark la representa mejor.
-
-III- ¿Cuál es el rendimiento de estos procesadores para compilar el kernel de linux ?
+II- ¿Cuál es el rendimiento de estos procesadores para compilar el kernel de linux ?
 
 Intel Core i5-13600K
 AMD Ryzen 9 5900X 12-Core
 
-IV- Cual es la aceleración cuando usamos un AMD Ryzen 9 7950X 16-Core https://openbenchmarking.org/test/pts/build-linux-kernel-1.15.0
+https://openbenchmarking.org/test/pts/build-linux-kernel-1.15.0
+
+III- ¿Cual es la aceleración cuando usamos un AMD Ryzen 9 7950X 16-Core ?
 
 ### Benchmark
 
@@ -58,7 +60,7 @@ Para hacer un benchmarking efectivo, estos son los pasos que debes seguir:
 6. Implementa cambios
 7. Evalua y Repite
 
-**¿cuales les serían más útiles a cada uno? ¿Cuáles podrían llegar a medir mejor las tareas que ustedes realizan a diario ?**
+**¿cuales les serían más útiles a cada uno? ¿Cuáles podrían llegar a medir mejor las tareas que ustedes realizan a diario ? Pensar en las tareas que cada uno realiza a diario y escribir en una tabla de dos entradas las tareas y que benchmark la representa mejor.**
 
 | Tarea | Benchmark |
 |-|-|
@@ -66,3 +68,61 @@ Para hacer un benchmarking efectivo, estos son los pasos que debes seguir:
 | Cambiar el proveedor de internet | Competitivo, Servicos, costos, Productos |
 | Preparar un final | Interno | 
 | Performance de un API | Reducido. kernel |
+
+### Rendimiento
+
+- **¿Cuál es el rendimiento de estos procesadores para compilar el kernel de linux ?**
+
+Para realizar la comparación entre los microprocesadores AMD Ryzen 9 5900X 12-Cor y Intel Core i5-13600K utilizaremos Open Benchmarking.
+
+Open Benchmarking es una página open-source que permite a los usuarios comparar el rendimiento de microprocesadores. Esta página posee un test que mide el rendimiento que tienen los procesadores en compilar el kernel de linux ya sea una configuración del kernel (defconfig) o con la configuración que incluye todos los drivers y módulos (allmodconfig). Nosotros usaremos los dos ya que no existen benchmarks para una versión pero si para otra.
+¿Cuál es el rendimiento de estos procesadores para compilar el kernel de linux ?
+Para calcular el rendimiento utilizamos la fórmula  
+
+```bash
+n = 1/tiempo [ s-1 ]
+```
+
+Donde el tiempo en nuestro caso sería representado por el tiempo de compilación. Por lo que obtuvimos los siguientes resultados:
+
+| Componente | v1.14x [mHz] | v1.15x [mHz] |
+|:-|:-:|:-:|
+| AMD Ryzen 9 5900X 12-Core | 1.29 | 13.2 |
+| Intel Core i5-13600K | 1.42 | 13.2 |
+
+
+La versión 1.14x usa allmodconfig y la 1.15x defconfig.
+
+Para la versión 1.14x el micro de AMD obtuvo una clara ventaja sobre Intel pero a partir de la versión 1.15x ambos obtuvieron el mismo rendimiento, este cambio se pudo porque se agregaron nuevas características, se realizaron nuevas optimizaciones, configuración del kernel, etc.. Lo curioso es que el número de muestras de Intel tiene solo 4 benchmarks es pequeño comparado que el de AMD por lo cual es cuestionable decir que ambos tienen el mismo rendimiento. Si planteamos intervalos de confianza para ambos procesadores podremos tener otra perspectiva del rendimiento de estos. Solo se usaron los valores de la versión 1.15x.
+
+| Componente|Rank|Resultados públicos|Segundos (Media)|IC 95% (Normal)|IC 95% (t-student)|
+|:-|:-:|:-:|:-:|:-:|:-:|
+| AMD Ryzen 9 5900X 12-Core    | 55th | 16                  | 76 +/- 6         | 12.63 , 13.73    | 12.69, 13.66       |
+| Intel Core i5-13600K         | 55th | 4                   | 76 +/- 3         | 12.38, 14.04     | 13.02, 13.30       |
+
+
+A partir de los intervalos de confianza podemos decir que el procesador de AMD tiene un mejor y peor rendimiento en el mejor y peor de los casos respectivamente si utilizamos t-student. En cambio usando la distribución normal el rendimiento de micro de Intel es mucho peor que el de AMD.
+
+![kernel](../images/kernel.png)
+
+¿Cuál es la aceleración cuando usamos un AMD Ryzen 9 7950X 16-Core? Según las ley de Amdahl  podemos decir que la aceleración es igual a:
+
+aceleración = sist.nuevosist.antiguo
+por lo cual para el procesador AMD Ryzen 9 7950X 16-Core según el tiempo de compilación de kernel de linux en la versión 1.14x y 1.15x es de  
+aceleraciónRyzen 9 7950X = 513 [s]-1457 [s]-1   = 0.89
+
+- **¿Cual es la aceleración cuando usamos un AMD Ryzen 9 7950X 16-Core ?**
+
+Según las ley de Amdahl  podemos decir que la aceleración es igual a:
+
+$$
+\text{aceleración} = \frac{R_{\text{sist.nuevo}}}{R_{\text{sist.antiguo}}}
+$$
+
+$R: Rendimiento$
+
+por lo cual para el procesador AMD Ryzen 9 7950X 16-Core según el tiempo de compilación de kernel de linux en la versión 1.14x y 1.15x es de 
+
+$$
+\text{aceleración} = \frac{513\ [s^{-1}]}{1457\ [s^{-1}]} = 0.89
+$$
