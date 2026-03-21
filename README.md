@@ -6,8 +6,8 @@
 
 ## Temas
 
-- [msp32 INFORME](./msp32/INFORME.md)
-- [benchmarks INFORME](./benchmarks/INFORME.md)
+- [X] [msp32 INFORME](./msp32/INFORME.md)
+- [X] [benchmarks INFORME](./benchmarks/INFORME.md)
 
 ## Branch
 

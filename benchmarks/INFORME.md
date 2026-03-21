@@ -79,9 +79,9 @@ Open Benchmarking es una página open-source que permite a los usuarios comparar
 ¿Cuál es el rendimiento de estos procesadores para compilar el kernel de linux ?
 Para calcular el rendimiento utilizamos la fórmula  
 
-```bash
-n = 1/tiempo [ s-1 ]
-```
+$$
+n = \frac{1}{\text{tiempo}}\ [s^{-1}]
+$$
 
 Donde el tiempo en nuestro caso sería representado por el tiempo de compilación. Por lo que obtuvimos los siguientes resultados:
 
@@ -104,12 +104,6 @@ Para la versión 1.14x el micro de AMD obtuvo una clara ventaja sobre Intel pero
 A partir de los intervalos de confianza podemos decir que el procesador de AMD tiene un mejor y peor rendimiento en el mejor y peor de los casos respectivamente si utilizamos t-student. En cambio usando la distribución normal el rendimiento de micro de Intel es mucho peor que el de AMD.
 
 ![kernel](../images/kernel.png)
-
-¿Cuál es la aceleración cuando usamos un AMD Ryzen 9 7950X 16-Core? Según las ley de Amdahl  podemos decir que la aceleración es igual a:
-
-aceleración = sist.nuevosist.antiguo
-por lo cual para el procesador AMD Ryzen 9 7950X 16-Core según el tiempo de compilación de kernel de linux en la versión 1.14x y 1.15x es de  
-aceleraciónRyzen 9 7950X = 513 [s]-1457 [s]-1   = 0.89
 
 - **¿Cual es la aceleración cuando usamos un AMD Ryzen 9 7950X 16-Core ?**
 
