@@ -32,7 +32,7 @@ Entonces, compilemos nuestro código con la opción '-pg':
 $ gcc -Wall -pg test_gprof.c test_gprof_new.c -o test_gprof 
 ```
 
-![Paso 1](../images/profiling/paso-1.png)
+![Paso 1](../../images/profiling/paso-1.png)
 
 ### Paso 2: Ejecutar el código
 
@@ -55,7 +55,7 @@ gmon.out  test_gprof  test_gprof.c  test_gprof_new.c
 Entonces vemos que cuando se ejecuta el binario, se genera un nuevo archivo 'gmon.out' en el directorio de trabajo actual. 
 Tenga en cuenta que durante la ejecución, si el programa cambia el directorio de trabajo actual (usando chdir), se generará gmon.out en el nuevo directorio de trabajo actual. Además, su programa debe tener permisos suficientes para que gmon.out se cree en el directorio de trabajo actual.
 
-![Paso 2](../images/profiling/paso-2_1.png)
+![Paso 2](../../images/profiling/paso-2_1.png)
 
 ### Paso 3: Ejecute la herramienta gprof
 
@@ -70,7 +70,7 @@ analysis.txt  gmon.out  test_gprof  test_gprof.c  test_gprof_new.c
 
 Entonces vemos que se generó un archivo llamado 'analysis.txt'. 
 
-![Paso 3_1](../images/profiling/paso-3_1.png)
+![Paso 3_1](../../images/profiling/paso-3_1.png)
 
 #### **Comprensión de la información de perfil**
 
@@ -144,7 +144,7 @@ plano**
 $ gprof -pfunc1 -b test_gprof gmon.out > analysis.txt 
 ```
 
-![Paso 3_1 custom gprof](../images/profiling/paso-3_1_gprof_custom.png)
+![Paso 3_1 custom gprof](../../images/profiling/paso-3_1_gprof_custom.png)
 
 ### Genere un gráfico
 
@@ -164,11 +164,11 @@ $ sudo apt install graphviz
 ```
 
 ```bash
-gprof ./Code/test_gprof gmon.out | gprof2dot | dot -Tpng -o ../images/profiling/graph.png
+gprof ./Code/test_gprof gmon.out | gprof2dot | dot -Tpng -o ../../images/profiling/graph.png
 ```
 
 
-![Paso 3_3 graph](../images/profiling/graph.png)
+![Paso 3_3 graph](../../images/profiling/graph.png)
 
 
 ## Profiling con linux perf
