@@ -1,0 +1,117 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 76K of event 'task-clock:ppp'
+# Event count (approx.): 19038250000
+#
+# Overhead  Command     Shared Object         Symbol                                          
+# ........  ..........  ....................  ................................................
+#
+    39.55%  test_gprof  test_gprof            [.] func1
+    28.11%  test_gprof  test_gprof            [.] func2
+    23.98%  test_gprof  test_gprof            [.] new_func1
+     2.78%  test_gprof  test_gprof            [.] main
+     1.66%  test_gprof  [kernel.kallsyms]     [k] irqentry_exit_to_user_mode
+     1.22%  test_gprof  [kernel.kallsyms]     [k] handle_softirqs
+     0.70%  test_gprof  [kernel.kallsyms]     [k] _raw_spin_unlock_irqrestore
+     0.58%  test_gprof  [kernel.kallsyms]     [k] finish_task_switch.isra.0
+     0.32%  test_gprof  [kernel.kallsyms]     [k] _raw_spin_unlock_irq
+     0.12%  test_gprof  libc.so.6             [.] __profil_counter
+     0.10%  test_gprof  [kernel.kallsyms]     [k] __get_user_8
+     0.06%  test_gprof  [kernel.kallsyms]     [k] rep_stos_alternative
+     0.04%  test_gprof  [kernel.kallsyms]     [k] x64_setup_rt_frame
+     0.03%  test_gprof  [kernel.kallsyms]     [k] x64_sys_call
+     0.03%  test_gprof  [kernel.kallsyms]     [k] copy_fpstate_to_sigframe
+     0.03%  test_gprof  [kernel.kallsyms]     [k] do_sigaltstack.constprop.0
+     0.03%  test_gprof  [kernel.kallsyms]     [k] srso_safe_ret
+     0.03%  test_gprof  [kernel.kallsyms]     [k] fpu__alloc_mathframe
+     0.02%  test_gprof  [kernel.kallsyms]     [k] signal_setup_done
+     0.02%  test_gprof  [kernel.kallsyms]     [k] rep_movs_alternative
+     0.02%  test_gprof  [kernel.kallsyms]     [k] restore_fpregs_from_init_fpstate.constprop.0
+     0.02%  test_gprof  [kernel.kallsyms]     [k] update_sd_lb_stats.constprop.0
+     0.02%  test_gprof  [kernel.kallsyms]     [k] __fpu_restore_sig
+     0.02%  test_gprof  [kernel.kallsyms]     [k] __schedule
+     0.02%  test_gprof  [kernel.kallsyms]     [k] __x64_sys_rt_sigreturn
+     0.02%  test_gprof  [kernel.kallsyms]     [k] fpu__clear_user_states
+     0.02%  test_gprof  [kernel.kallsyms]     [k] sched_balance_rq
+     0.02%  test_gprof  [kernel.kallsyms]     [k] sched_balance_update_blocked_averages
+     0.02%  test_gprof  [kernel.kallsyms]     [k] blkcg_maybe_throttle_current
+     0.01%  test_gprof  [kernel.kallsyms]     [k] get_signal
+     0.01%  test_gprof  [kernel.kallsyms]     [k] handle_signal
+     0.01%  test_gprof  [kernel.kallsyms]     [k] task_work_run
+     0.01%  test_gprof  [kernel.kallsyms]     [k] do_syscall_64
+     0.01%  test_gprof  [kernel.kallsyms]     [k] posix_cpu_timers_work
+     0.01%  test_gprof  [kernel.kallsyms]     [k] save_xstate_epilog
+     0.01%  test_gprof  [kernel.kallsyms]     [k] uprobe_deny_signal
+     0.01%  test_gprof  [kernel.kallsyms]     [k] __lock_task_sighand
+     0.01%  test_gprof  [kernel.kallsyms]     [k] arch_do_signal_or_restart
+     0.01%  test_gprof  [kernel.kallsyms]     [k] e1000_clean
+     0.01%  test_gprof  [kernel.kallsyms]     [k] note_gp_changes
+     0.01%  test_gprof  [kernel.kallsyms]     [k] restore_sigcontext
+     0.01%  test_gprof  [kernel.kallsyms]     [k] rseq_get_rseq_cs
+     0.01%  test_gprof  [kernel.kallsyms]     [k] rseq_ip_fixup
+     0.01%  test_gprof  [kernel.kallsyms]     [k] setup_signal_shadow_stack
+     0.01%  test_gprof  [kernel.kallsyms]     [k] update_sg_lb_stats
+     0.01%  test_gprof  [kernel.kallsyms]     [k] __cond_resched
+     0.01%  test_gprof  [kernel.kallsyms]     [k] mem_cgroup_handle_over_high
+     0.01%  test_gprof  [kernel.kallsyms]     [k] task_mm_cid_work
+     0.01%  test_gprof  [kernel.kallsyms]     [k] __local_bh_enable_ip
+     0.01%  test_gprof  [kernel.kallsyms]     [k] __rseq_handle_notify_resume
+     0.01%  test_gprof  [kernel.kallsyms]     [k] copy_siginfo_to_user
+     0.01%  test_gprof  [kernel.kallsyms]     [k] fpregs_mark_activate
+     0.01%  test_gprof  [kernel.kallsyms]     [k] get_sigframe
+     0.01%  test_gprof  [kernel.kallsyms]     [k] restore_altstack
+     0.01%  test_gprof  [kernel.kallsyms]     [k] set_current_blocked
+     0.01%  test_gprof  [kernel.kallsyms]     [k] tmigr_handle_remote_cpu
+     0.01%  test_gprof  [kernel.kallsyms]     [k] tmigr_handle_remote
+     0.01%  test_gprof  [kernel.kallsyms]     [k] xfd_validate_state
+     0.01%  test_gprof  [kernel.kallsyms]     [k] mutex_lock
+     0.01%  test_gprof  [kernel.kallsyms]     [k] mutex_unlock
+     0.01%  test_gprof  [kernel.kallsyms]     [k] rcu_core
+     0.01%  test_gprof  [kernel.kallsyms]     [k] srso_return_thunk
+     0.01%  test_gprof  [kernel.kallsyms]     [k] timer_expire_remote
+     0.00%  test_gprof  [kernel.kallsyms]     [k] __get_user_nocheck_4
+     0.00%  test_gprof  [kernel.kallsyms]     [k] __get_user_nocheck_8
+     0.00%  test_gprof  [kernel.kallsyms]     [k] __put_user_nocheck_4
+     0.00%  test_gprof  [kernel.kallsyms]     [k] __rcu_read_lock
+     0.00%  test_gprof  [kernel.kallsyms]     [k] blk_update_request
+     0.00%  test_gprof  [kernel.kallsyms]     [k] check_xstate_in_sigframe
+     0.00%  test_gprof  [kernel.kallsyms]     [k] e1000_xmit_frame
+     0.00%  test_gprof  [kernel.kallsyms]     [k] restore_fpregs_from_user
+     0.00%  test_gprof  [kernel.kallsyms]     [k] sched_balance_find_src_group
+     0.00%  test_gprof  [kernel.kallsyms]     [k] __raw_spin_lock_irqsave
+     0.00%  test_gprof  [kernel.kallsyms]     [k] __restore_fpregs_from_user
+     0.00%  test_gprof  [kernel.kallsyms]     [k] _raw_spin_lock_irq
+     0.00%  test_gprof  [kernel.kallsyms]     [k] _raw_spin_lock_irqsave
+     0.00%  test_gprof  [kernel.kallsyms]     [k] cs_watchdog_read
+     0.00%  test_gprof  [kernel.kallsyms]     [k] do_nocb_deferred_wakeup.isra.0
+     0.00%  test_gprof  [kernel.kallsyms]     [k] queue_work_on
+     0.00%  test_gprof  [kernel.kallsyms]     [k] schedule_debug.isra.0
+     0.00%  test_gprof  [kernel.kallsyms]     [k] siginfo_layout
+     0.00%  test_gprof  [kernel.kallsyms]     [k] syscall_exit_to_user_mode_prepare
+     0.00%  test_gprof  libc.so.6             [.] __restore_rt
+     0.00%  test_gprof  [kernel.kallsyms]     [k] __bitmap_weight
+     0.00%  test_gprof  [kernel.kallsyms]     [k] _copy_from_user
+     0.00%  test_gprof  [kernel.kallsyms]     [k] _copy_to_user
+     0.00%  test_gprof  [kernel.kallsyms]     [k] _find_next_and_bit
+     0.00%  test_gprof  [kernel.kallsyms]     [k] bio_put
+     0.00%  test_gprof  [kernel.kallsyms]     [k] blk_stat_add
+     0.00%  test_gprof  [kernel.kallsyms]     [k] blk_stat_timer_fn
+     0.00%  test_gprof  [kernel.kallsyms]     [k] ext4_mb_mark_context
+     0.00%  test_gprof  [kernel.kallsyms]     [k] fpu__restore_sig
+     0.00%  test_gprof  [kernel.kallsyms]     [k] lruvec_stat_mod_folio.constprop.0
+     0.00%  test_gprof  [kernel.kallsyms]     [k] process_timeout
+     0.00%  test_gprof  [kernel.kallsyms]     [k] sched_balance_domains
+     0.00%  test_gprof  [kernel.kallsyms]     [k] schedule
+     0.00%  test_gprof  [kernel.kallsyms]     [k] tmigr_handle_remote_up
+     0.00%  test_gprof  [kernel.kallsyms]     [k] truncate_folio_batch_exceptionals
+     0.00%  test_gprof  [kernel.kallsyms]     [k] tty_write
+     0.00%  test_gprof  ld-linux-x86-64.so.2  [.] init_cpu_features.constprop.0
+     0.00%  test_gprof  libc.so.6             [.] __strlen_avx2
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
