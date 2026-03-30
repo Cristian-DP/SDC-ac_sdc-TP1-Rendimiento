@@ -4,7 +4,6 @@
 - **Integrantes:** {cristian.pereyra,francisco.coschica,nicolas.lopez.casanegra}@mi.unc.edu.ar 
 - **Profesor:** Javier Jorge
 
-
 ## Objetivo
 
 El objetivo de esta tarea es poner en práctica los conocimientos sobre performance y rendimiento de los computadores. El trabajo consta de dos partes, la primera es utilizar benchmarks de terceros para tomar decisiones de hardware y la segunda consiste en utilizar herramientas para medir la performance de nuestro código.
@@ -25,13 +24,14 @@ https://openbenchmarking.org/test/pts/build-linux-kernel-1.15.0
     Cada uno de los integrantes tendrá un repositorio individual sincronizado con el resto de su equipo.
     En el archivo resultados deben colocar los resultados de las mediciones de sus computadoras de manera indiviudal
 
-
-
 ## Temas
 
-- [X] [Informe msp32](./msp32/INFORME.md)
+- [X] [Informes msp32](./msp32)
 - [X] [Informe benchmarks](./benchmarks/INFORME.md)
-- [X] [Informe profiling](./profiling/Cristian/INFORME.md)
+- [X] [Informes profiling](./profiling)
+    - [X] [Informe Cristian](./profiling/Cristian/INFORME.md)
+    - [X] [Informe Franscisco](./profiling/Francisco/INFORME.md)
+    - [X] [Informe Nicolas](./profiling/Nicolas/INFORME.md)
 
 ## Branch
 
